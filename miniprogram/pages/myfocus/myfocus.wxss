@@ -1,0 +1,78 @@
+.box{
+    background-color: #F3F4F8;
+    width: 100%;
+    height: 100%;
+}
+sup{
+    font-size: 10px;
+    vertical-align:text-top;
+}
+.box .tit{
+    background-color: #fff;
+    width: 100%;
+    height: 80rpx;
+    display: flex;
+    align-items: center;
+}
+.tit image{
+    width: 60rpx;
+    padding: 0 20rpx 0 20rpx;
+}
+.tit text{
+    font-weight: bold;
+    font-size: 34rpx;
+}
+.Item{
+    display: flex;
+    background-color: #fff;
+    margin: 20rpx;
+    padding: 15rpx 0;
+    align-items: center;
+  }
+  .Item .Pic{
+    padding-left: 10rpx;
+    width: 300rpx;
+  }
+  .Item .Pic image{
+    width: 100%;
+  }
+  .Item .txt{
+    margin-left: 25rpx;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 5rpx 0;
+  }
+  
+  .Item .Tit{
+    font-size: 34rpx;
+  }
+  .Item .Type{
+    font-size: 25rpx;
+    color: #888;
+  }
+  .Item .foot{
+    display: flex;
+    justify-content: space-between;
+  }
+  .Item .Money{
+    font-size: 28rpx;
+    color: #FF6600;
+    font-weight: bold;
+  }
+  .Item .Time{
+    font-size: 26rpx;
+    padding: 5rpx 15rpx;
+    color: #808080;
+  }
+  .Item .btn{
+    text-align: right;
+    font-size: 30rpx;
+    padding-right: 20rpx ;
+    color: #35BAF1;
+  }
+.img image{
+    width: 100%;
+    height: 100%;
+    margin-top: 5rpx;
+}

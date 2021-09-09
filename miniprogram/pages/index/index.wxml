@@ -1,0 +1,68 @@
+<view class="container">
+   <!-- 轮播图 -->
+    <view class="banner-box">
+        <swiper 
+            indicator-dots
+            indicator-color="rgba(255,255,255,0.5)"
+            indicator-active-color="#fff"
+            circular autoplay interval="4000"
+            >
+        <swiper-item><image mode="heightFix" src="https://7867-xgj-yu-8gcmkkh897ae1354-1305256125.tcb.qcloud.la/banner/banner-1.jpg?sign=a50b431c3a4961b46b0388b477d5940c&t=1616075543"></image></swiper-item>
+        <swiper-item><image mode="heightFix" src="https://7867-xgj-yu-8gcmkkh897ae1354-1305256125.tcb.qcloud.la/banner/banner-2.jpg?sign=b4b51e109e93e820ad29762d7f3687f6&t=1616075601"></image></swiper-item>
+        <swiper-item><image mode="heightFix" src="https://7867-xgj-yu-8gcmkkh897ae1354-1305256125.tcb.qcloud.la/banner/banner-3.jpg?sign=7583e6c93d00d75ed7fea445ddbf23db&t=1616075608"></image></swiper-item>
+        <swiper-item><image mode="heightFix" src="https://7867-xgj-yu-8gcmkkh897ae1354-1305256125.tcb.qcloud.la/banner/banner-4.jpg?sign=de542d232f405856aa0634df09ea3760&t=1616075615"></image></swiper-item>
+        </swiper>
+   </view>
+   <!-- 链接 -->
+   <view class="nav">
+        <navigator class="box" open-type="reLaunch" url="../findHouse/findHouse?rtype=1">
+            <image class="pic" src="/image/rentall.png"></image>
+            <view class="text">单租</view>
+        </navigator>
+        <navigator class="box" open-type="reLaunch" url="../findHouse/findHouse?rtype=2">
+            <image class="pic" src="/image/rent.png"></image>
+            <view class="text">整租</view>
+        </navigator>
+        <navigator class="box" url="/pages/publish/publish">
+            <image class="pic" src="/image/publish.png"></image>
+            <view class="text">发布房源</view>
+        </navigator>
+        <navigator class="box" url="/pages/guide/guide">
+            <image class="pic" src="/image/Guide.png"></image>
+            <view class="text">攻略</view>
+        </navigator>
+   </view>
+   <van-tabs active="{{ active }}" bind:change="onChange" class="tabssty">
+        <van-tab title="热门推荐">
+            <view class="Info">
+            <wxs src="./../utils/subStr.wxs" module="tools"></wxs>
+            <navigator class="Item" wx:for="{{result}}" wx:key="index" url="../detail/detail?id={{item._id}}">
+                <image mode="widthFix" class="Pic" src="{{item.image[0]}}"></image>
+                <view class="txt">
+                    <view class="Tit">{{tools.sub(item.title)}}</view>
+                    <view class="Type">{{item.htype}} | {{item.area}} | {{item.floor}} | {{item.rtype}}</view>
+                    <view class="foot">
+                         <view class="Money">{{item.rent}}元/月</view>
+                         <view class="Time">{{item.createtime}}</view>
+                    </view>
+                </view>
+            </navigator>    
+        </view>
+        </van-tab>
+        <van-tab title="最新房源">
+            <view class="Info">
+                <navigator class="Item" wx:for="{{new}}" wx:key="index" url="../detail/detail?id={{item._id}}"> 
+                    <image mode="widthFix" class="Pic" src="{{item.image[0]}}"></image>
+                    <view class="txt">
+                        <view class="Tit">{{tools.sub(item.title)}}</view>
+                        <view class="Type">{{item.htype}} | {{item.area}} | {{item.floor}} | {{item.rtype}}</view>
+                        <view class="foot">
+                            <view class="Money">{{item.rent}}元/月</view>
+                            <view class="Time">{{item.createtime}}</view>
+                        </view>
+                    </view>
+                </navigator>    
+            </view>
+        </van-tab>
+    </van-tabs>
+</view>

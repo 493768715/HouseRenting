@@ -1,0 +1,37 @@
+.guideBox{
+    height: 100%;
+    margin: 60rpx 60rpx 0 60rpx;
+}
+.guideBox .tit{
+    font-size: 40rpx;
+    font-weight: bold;
+}
+.guideBox .author{
+    margin-top: 20rpx;
+    color: #B3B3B3;
+    font-size: 30rpx;
+}
+.rule{
+    line-height: 50rpx;
+    width: 600rpx;
+    font-size: 34rpx;
+}
+.rule .rtit{
+    margin-top: 100rpx;
+    background-color: #0052FF;
+    color: #fff;
+    height: 60rpx;
+    padding: 10rpx 10rpx 0 10rpx;
+    font-size: 35rpx;
+    font-weight: bold;
+    display:inline-block;
+}
+.foot{
+    margin-top: 60rpx;
+    border-top: 1rpx solid #ddd ;
+    height: 100rpx;
+    text-align: center;
+    width: 600rpx;
+    color: 	#C0C0C0;
+    padding-top: 20rpx ;
+}

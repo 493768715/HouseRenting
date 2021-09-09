@@ -1,0 +1,26 @@
+<van-tabs active="{{ active }}">
+  <van-tab title="我的消息">
+      <view wx:if="{{message.length==0}}" class="img">
+          <image mode="widthFix" src="/image/no-house.png"></image>
+      </view>
+      <view class="box" wx:else>
+        <view class="item" wx:for="{{message}}" wx:key="index">
+          <view class="tit">{{item.type}}</view>
+          <view class="title">{{item.minfo}}</view>
+          <view class="time">{{item.createtime}}</view>
+        </view>
+      </view>
+  </van-tab>
+  <van-tab title="系统消息">
+    <view wx:if="{{Message.length==0}}" class="img">
+          <image mode="widthFix" src="/image/no-house.png"></image>
+      </view>
+      <view class="box" wx:else>
+        <view class="item" wx:for="{{Message}}" wx:key="index">
+          <view class="tit">系统消息</view>
+          <view class="title">{{item.minfo}}</view>
+          <view class="time">{{item.createtime}}</view>
+        </view>
+      </view>
+  </van-tab>
+</van-tabs>

@@ -1,0 +1,72 @@
+
+<view class="container">
+    <!-- 头像 -->
+    <view class="head" wx:if="{{Islogin==false}}">
+        <view class="hpic">
+            <van-image
+                round="true"
+                width="180rpx"
+                height="180rpx"
+                src="/image/head.png"
+                />
+        </view>
+        <button class="log"  type="primary" bindtap="getlogin">授权登陆</button>
+    </view>
+    <navigator class="head" wx:else url="/pages/myinfo/myinfo">
+        <view class="hpic">
+            <van-image
+                round="true"
+                width="180rpx"
+                height="180rpx"
+                src="{{userinfo.image}}"
+                />
+        </view>
+        <view class="info">
+            <view class="name">
+                <image mode="widthFix" src="/image/boy.png" wx:if="{{Issex==1}}"></image>
+                <image mode="widthFix" src="/image/girl.png" wx:else if="{{Issex==2}}"></image>
+                <text>{{userinfo.name}}</text>
+            </view>
+            <view class="desc" wx:if="{{userinfo.desc.length > 0}}">{{userinfo.desc}}</view>
+            <view class="desc" wx:else>什么都没留下</view>
+        </view>
+        <image class="arrow" mode="widthFix" src="/image/arrow-right.png"></image>
+    </navigator>
+
+    <!-- 链接 -->
+    <navigator class="item house" url="/pages/myhouse/myhouse">
+        <image mode="widthFix" class="Pic" src="/image/myhouse.png"></image>
+        <text>我的房源</text>
+        <image class="arrow" mode="widthFix" src="/image/arrow-right.png"></image>
+    </navigator>
+    <navigator class="item col" url="/pages/collect/collect">
+        <image mode="widthFix" class="Pic" src="/image/collect.png"></image>
+        <text>收藏</text>
+        <image class="arrow" mode="widthFix" src="/image/arrow-right.png"></image>
+    </navigator>
+    <navigator class="item col" url="/pages/myfocus/myfocus">
+        <image mode="widthFix" class="Pic" src="/image/focus.png"></image>
+        <text>关注</text>
+        <image class="arrow" mode="widthFix" src="/image/arrow-right.png"></image>
+    </navigator>
+    <navigator class="item col" url="/pages/mymessage/mymessage">
+        <image mode="widthFix" class="Pic" src="/image/message.png"></image>
+        <text>我的消息</text>
+        <image class="arrow" mode="widthFix" src="/image/arrow-right.png"></image>
+    </navigator>
+    <navigator class="item col" url="/pages/bills/bills">
+        <image mode="widthFix" class="Pic" src="/image/c-rent.png"></image>
+        <text>交租</text>
+        <image class="arrow" mode="widthFix" src="/image/arrow-right.png"></image>
+    </navigator>
+    <navigator class="item" url="/pages/mysign/mysign">
+        <image mode="widthFix" class="Pic" src="/image/sign.png"></image>
+        <text>我的签约</text>
+        <image class="arrow" mode="widthFix" src="/image/arrow-right.png"></image>
+    </navigator>
+    <navigator class="item check" url="/pages/houseaudit/houseaudit">
+        <image mode="widthFix" class="Pic" src="/image/review.png"></image>
+        <text>房源审核</text>
+        <image class="arrow" mode="widthFix" src="/image/arrow-right.png"></image>
+    </navigator>
+</view>

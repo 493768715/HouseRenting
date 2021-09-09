@@ -1,0 +1,76 @@
+
+<van-tabs active="{{ act }}" bind:change="onChange" >
+  <wxs src="./../utils/subStr.wxs" module="tools"></wxs>
+    <van-tab title="未支付">
+      <view wx:if="{{orhouse.length==0}}" class="img">
+            <image src="/image/no-house.png"></image>
+        </view>
+      <view class="box" wx:else>
+        <view class="item" wx:for="{{orhouse}}" wx:key="index" >
+          <view class="info">
+            <image mode="widthFix" src="{{item.image[0]}}"></image>
+            <view class="txt">
+              <view class="title">{{tools.sub(item.title)}}</view>
+              <view class="time">{{order[index].createtime}}</view>
+            </view>
+            <view class="money">
+              <view><sub>￥</sub>{{order[index].rent}}</view>
+              <view class="num">×1</view>
+            </view>
+          </view>
+          <view class="other">
+            <view>实付：<sub>￥</sub>{{order[index].rent}}</view>
+            <button type="primary" size="mini" class="btn" bindtap="pay" data-index="{{index}}" data-id="{{order[index]._id}}">去支付</button>
+          </view>
+        </view>
+      </view>
+    </van-tab>
+    <van-tab title="已支付">
+      <view wx:if="{{ordhouse.length==0}}" class="img">
+            <image src="/image/no-house.png"></image>
+        </view>
+      <view class="box" wx:else>
+        <view class="item" wx:for="{{ordhouse}}" wx:key="index" >
+          <view class="info">
+            <image mode="widthFix" src="{{item.image[0]}}"></image>
+            <view class="txt">
+              <view class="title">{{tools.sub(item.title)}}</view>
+              <view class="time">{{ordered[index].createtime}}</view>
+            </view>
+            <view class="money">
+              <view><sub>￥</sub>{{ordered[index].rent}}</view>
+              <view class="num">×1</view>
+            </view>
+          </view>
+          <view class="other">
+            <view>实付：<sub>￥</sub>{{ordered[index].rent}}</view>
+            <view class="status">已支付</view>
+          </view>
+        </view>
+      </view>
+    </van-tab>
+    <van-tab title="逾期">
+      <view wx:if="{{overhouse.length==0}}" class="img">
+            <image src="/image/no-house.png"></image>
+      </view>
+      <view class="box" wx:else>
+        <view class="item" wx:for="{{overhouse}}" wx:key="index" >
+          <view class="info">
+            <image mode="widthFix" src="{{item.image[0]}}"></image>
+            <view class="txt">
+              <view class="title">{{item.title}}</view>
+              <view class="time">{{ordered[index].createtime}}</view>
+            </view>
+            <view class="money">
+              <view><sub>￥</sub>{{ordered[index].rent}}</view>
+              <view class="num">×1</view>
+            </view>
+          </view>
+          <view class="other">
+            <view>实付：<sub>￥</sub>{{ordered[index].rent}}</view>
+            <view class="warn">已过期</view>
+          </view>
+        </view>
+      </view>
+    </van-tab>
+</van-tabs>

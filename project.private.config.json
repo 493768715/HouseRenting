@@ -1,0 +1,77 @@
+{
+    "setting": {},
+    "condition": {
+        "plugin": {
+            "list": []
+        },
+        "game": {
+            "list": []
+        },
+        "gamePlugin": {
+            "list": []
+        },
+        "miniprogram": {
+            "list": [
+                {
+                    "id": -1,
+                    "name": "db guide",
+                    "pathName": "pages/databaseGuide/databaseGuide",
+                    "query": ""
+                },
+                {
+                    "name": "pages/mysign/mysign",
+                    "pathName": "pages/mysign/mysign",
+                    "query": "",
+                    "scene": null
+                },
+                {
+                    "name": "pages/mine/mine",
+                    "pathName": "pages/mine/mine",
+                    "query": "",
+                    "scene": null
+                },
+                {
+                    "name": "pages/myfocus/myfocus",
+                    "pathName": "pages/myfocus/myfocus",
+                    "query": "",
+                    "scene": null
+                },
+                {
+                    "name": "pages/detail/detail",
+                    "pathName": "pages/detail/detail",
+                    "query": "",
+                    "scene": null
+                },
+                {
+                    "name": "pages/bills/bills",
+                    "pathName": "pages/bills/bills",
+                    "query": "",
+                    "scene": null
+                },
+                {
+                    "name": "pages/publish/publish",
+                    "pathName": "pages/publish/publish",
+                    "query": "",
+                    "scene": null
+                },
+                {
+                    "name": "pages/sign/sign",
+                    "pathName": "pages/sign/sign",
+                    "query": "",
+                    "scene": null
+                },
+                {
+                    "name": "pages/findHouse/findHouse",
+                    "pathName": "pages/findHouse/findHouse",
+                    "query": "",
+                    "scene": null
+                },
+                {
+                    "name": "pages/signdetail/signdetail",
+                    "pathName": "pages/signdetail/signdetail",
+                    "scene": null
+                }
+            ]
+        }
+    }
+}

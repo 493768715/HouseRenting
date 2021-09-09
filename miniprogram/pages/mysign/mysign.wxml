@@ -1,0 +1,75 @@
+<van-tabs active="{{ active }}" bind:change="onChange">
+<wxs src="./../utils/subStr.wxs" module="tools"></wxs>
+    <van-tab title="已签约">
+        <view wx:if="{{sign.length==0&&orsign.length==0}}" class="img">
+            <image mode="widthFix" src="/image/no-house.png"></image>
+        </view>
+        <view class="box" wx:else>
+            <van-tabs active="{{ active }}"  
+                swipeable="true" >
+                <van-tab title="出租方">
+                    <navigator class="item" wx:for="{{sign}}" wx:key="index" url="../signdetail/signdetail?id={{item.signid}}&lessorname={{user.name}}&lesseename={{lessee[index].name}}">
+                        <view class="tit">{{tools.sub(item.title)}}</view>
+                        <view class="person">
+                            <text>出租方：{{user.name}}</text>
+                            <text>承租方：{{lessee[index].name}}</text>
+                        </view>
+                        <view class="crtime">
+                            <view>签约时间: {{eecreatetime[index]}}</view>
+                            <view class="break" catchtap="breakSign" data-id="{{item._id}}" data-listener="{{lessee[index]}}" data-who="lessee" data-index="{{index}}">解约</view>
+                        </view>
+                    </navigator>
+                </van-tab>
+                <van-tab title="承租方">
+                    <navigator class="item" wx:for="{{orsign}}" wx:key="index" url="../signdetail/signdetail?id={{item.signid}}&lessorname={{lessor[index].name}}&lesseename={{user.name}}">
+                        <view class="tit">{{tools.sub(item.title)}}</view>
+                        <view class="person">
+                            <text>出租方：{{lessor[index].name}}</text>
+                            <text>承租方：{{user.name}}</text>
+                        </view>
+                        <view class="crtime">
+                            <view>签约时间: {{orcreatetime[index]}}</view>
+                            <view class="break" catchtap="breakSign" data-id="{{item._id}}" data-listener="{{lessor[index]}}"  data-who="lessor" data-index="{{index}}">解约</view>
+                        </view>
+                    </navigator>
+                </van-tab>
+            </van-tabs>
+        </view>
+    </van-tab>
+  <van-tab title="待解约">
+      <view wx:if="{{break.length==0}}" class="img">
+          <image mode="widthFix" src="/image/no-house.png"></image>
+      </view>
+      <view class="box" wx:else>
+        <navigator class="item" wx:for="{{break}}" wx:key="index" url="../signdetail/signdetail?id={{item.signid}}&lessorname={{breaklessor[index].name}}&lesseename={{breaklessee[index].name}}">
+            <view class="tit">{{tools.sub(item.title)}}</view>
+            <view class="person">
+                <text>出租方：{{breaklessor[index].name}}</text>
+                <text>承租方：{{breaklessee[index].name}}</text>
+            </view>
+            <view class="crtime">
+                <view>请求解约: {{breakname[index]}}</view>
+                <view class="break" catchtap="break" data-id="{{item._id}}" data-signid="{{item.signid}}" data-index="{{index}}">确定</view>
+                <view class="break" catchtap="back" data-id="{{item._id}}" data-index="{{index}}">拒绝</view>
+            </view>
+        </navigator>
+      </view>
+  </van-tab>
+  <van-tab title="未签约">
+    <view wx:if="{{nosign.length==0}}" class="img">
+          <image mode="widthFix" src="/image/no-house.png"></image>
+      </view>
+      <view class="box" wx:else>
+        <navigator class="item" wx:for="{{nosign}}" wx:key="index" url="../signdetail/signdetail?id={{item.signid}}&lessorname={{user.name}}&lesseename=0">
+            <view class="tit">{{tools.sub(item.title)}}</view>
+            <view class="person">
+                <text>出租方：{{user.name}}</text>
+            </view>
+            <view class="crtime">
+                <view>创建时间: {{item.createtime}}</view>
+                <view class="break" data-id="{{item.signid}}" catchtap="edit">编辑</view>
+            </view>
+        </navigator>
+      </view>
+  </van-tab>
+</van-tabs>

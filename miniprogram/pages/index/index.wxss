@@ -1,0 +1,119 @@
+.banner-box{
+  height:100%;
+  width: 100%;
+}
+.banner-box swiper{
+  text-align: center;
+}
+.banner-box image{
+  height: 350rpx;
+}
+.nav{
+  display: flex;
+  margin:  10rpx;
+  background-color: #fff;
+}
+.nav .box{
+  text-align: center;
+  width: 25%;
+  padding: 20rpx 0 ;
+  height: 100%;
+}
+.nav .pic{
+  height: 91rpx;
+  width: 91rpx;
+}
+.nav .text{
+  font-size: 27rpx;
+  color: #A0B5BC;
+}
+.title{
+  display: flex;
+  justify-content: space-between;
+  height: 80rpx;
+  background-color: #fff;
+  margin: 20rpx 10rpx;
+  align-items: center;
+}
+.title .txt{
+  font-size: 40rpx;
+  position: relative;
+  height: 100%;
+  padding-left: 30rpx;
+  padding-top: 31rpx;
+}
+.title .ht::before{
+  display: block;
+  width: 10rpx;
+  height: 30rpx;
+  background-color: #d80b07;
+  content: "";
+  position:absolute;
+  left: 0;
+  top: 50%;
+  margin-top: -12rpx;
+}
+.title .nt::before{
+  display: block;
+  width: 10rpx;
+  height: 30rpx;
+  background-color: #3ACE7E;
+  content: "";
+  position:absolute;
+  left: 0;
+  top: 50%;
+  margin-top: -12rpx;
+}
+.title .more{
+  font-size: 34rpx;
+  color: #666;
+}
+.Info{
+  padding: 0 0 20rpx;
+}
+.Item{
+  display: flex;
+  background-color: #fff;
+  margin: 15rpx 20rpx;
+  padding: 15rpx 0;
+}
+.Item .Pic{
+  padding-left: 10rpx;
+  width: 300rpx;
+}
+.Item .Pic image{
+  width: 100%;
+}
+.Item .txt{
+  margin-left: 25rpx;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 5rpx 0;
+}
+
+.Item .Tit{
+  font-size: 34rpx;
+}
+.Item .Type{
+  font-size: 25rpx;
+  color: #888;
+}
+.Item .foot{
+  display: flex;
+  justify-content: space-between;
+}
+.Item .Money{
+  font-size: 28rpx;
+  color: #FF6600;
+  font-weight: bold;
+}
+.Item .Time{
+  font-size: 26rpx;
+  padding: 5rpx 15rpx;
+  color: #808080;
+}
+.tabssty{
+  font-weight: bold;
+  
+}

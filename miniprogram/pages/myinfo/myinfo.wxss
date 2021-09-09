@@ -1,0 +1,49 @@
+.infoBox{
+    width: 100%;
+    height: 100%;
+}
+.image{
+    height: 200rpx;
+    border: 1rpx solid #eee;
+    padding: 50rpx 50rpx 0;
+    display: flex;
+    align-items: center;
+}
+.image .btn{
+    margin-left: 50rpx;
+}
+.item{
+    display: flex;
+    height: 80rpx;
+    align-items: center;
+    border: 1rpx solid #EEEEEE;
+    font-size: 30rpx;
+    position: relative;
+    padding: 5rpx 0 5rpx 20rpx;
+}
+.item text{
+    margin: 0 140rpx 0 30rpx;
+    color: #646566;
+    width: 90rpx;
+}
+.item picker{
+    width: 100%;
+}
+.desc{
+    width: 100%;
+    margin: 20rpx 0 0rpx 50rpx;
+}
+.desc text{
+    color:  #646566; 
+}
+.desc textarea{
+    margin-top: 30rpx;
+    padding: 20rpx;
+    height: 240rpx;
+    width: 600rpx;
+    border: 1rpx solid #CDCDCD;
+}
+.sub{
+    margin-top: 50rpx;
+    text-align: center;
+}

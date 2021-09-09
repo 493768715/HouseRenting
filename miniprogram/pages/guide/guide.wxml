@@ -1,0 +1,35 @@
+<view class="guideBox">
+    <view class="tit">租房需知</view>
+    <view class="author">
+        <text decode="{{true}}">xgj&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;2021-3-20</text>
+    </view>
+    <view class="rule">
+        <view class="rtit">租房步骤</view>
+        <view>1.查找房源</view>
+        <view>2.挑选心怡房屋</view>
+        <view>3.联系房东,签订租房协议</view>
+    </view>
+    <view class="rule">
+        <view class="rtit">第一. 房源查找</view>
+        <view>1. 需求地点就近原则。其它地点根据房源位置，交通状况，购物，或者其他个人需求是否可以满足为参考</view>
+        <view>2. 看房前请确认房源真实性，可以了解发布房源者身份，避免房源图片欺骗。</view>
+    </view>
+    <view class="rule">
+        <view class="rtit">第二. 房源挑选 *</view>
+        <view>1.  打开地图，根据自己能接受的范围，查看范围内的的住宅区。查看附近地铁站公交站超市等。</view>
+        <view>2. 公交站距离？地铁站距离？上班是否方便？</view>
+        <view>3. 房源几室？了解房间配置，是否隔断，采光状况，是否电梯房，房间面积等</view>
+        <view>4. 水电具体收费以及交付方式？物业费？网费？保洁费？是否会有其他额外收费？房租的交付方式？</view>
+        <view>5. 不确定租期，请了解提前搬出等事项。</view>
+        <view>6. 百度一下该小区，是否曾有不好的事件发生。</view>
+    </view>
+    <view class="rule">
+        <view class="rtit">第三.看房，签订租房协议</view>
+        <view>1. 看房时咨询对方是否房东，是否二手房东？这个要问清楚，要求查看相关证件。很多黑房东就是骗子收了钱然后各种霸王条款的。所以要确认好是否房东本人。</view>
+        <view>2. 认真阅读协议条款后签署协议。</view>
+        <view>3. 和房东一起确认屋内所有物品，是否有损坏的情况。</view>
+    </view>
+    <view class="foot">
+        end
+    </view>
+</view>

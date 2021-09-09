@@ -1,0 +1,24 @@
+<view class="box">
+    <view class="tit">
+        <image mode="widthFix" src="/image/collect.png"></image>
+        <text>我的收藏</text>
+    </view>
+    <view class="img" wx:if="{{collect.length==0}}">
+        <image mode="widthFix" src="/image/no-collect.png"></image>
+    </view>
+    <view wx:else>
+        <navigator class="Item" wx:for="{{collect}}" wx:key="index" url="../detail/detail?id={{item._id}}">
+                <wxs src="./../utils/subStr.wxs" module="tools"></wxs>
+                <image mode="widthFix" class="Pic" src="{{item.image[0]}}"></image>
+                <view class="txt">
+                    <view class="Tit">{{tools.sub(item.title)}}</view>
+                    <view class="Type">{{item.htype}} | {{item.area}} | {{item.floor}} | {{item.rtype}}</view>
+                    <view class="foot">
+                        <view class="Money">{{item.rent}}元/月</view>
+                        <view class="Time">{{item.createtime}}</view>
+                    </view>
+                    <view class="btn" catchtap="deleteCollect"  data-id="{{item._id}}">取消收藏</view>
+                </view>
+        </navigator>
+    </view>
+</view>

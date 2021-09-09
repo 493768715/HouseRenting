@@ -1,0 +1,7 @@
+.container{
+    height: 100%;
+    font-size: 32rpx;
+    background-color: #F3F4F8;
+    margin: 0rpx;
+    padding: 0rpx;
+  }

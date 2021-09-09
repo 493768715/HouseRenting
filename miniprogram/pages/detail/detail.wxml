@@ -1,0 +1,80 @@
+<view class="Box">
+    <!-- 房屋轮播图 -->
+    <swiper class="swiper"
+        indicator-dots
+        indicator-color="rgba(255,255,255,0.5)"
+        indicator-active-color="#fff"
+        >
+        <swiper-item class="sitem" wx:for="{{detail.image}}" wx:key="index">
+            <image mode="widthFix" src="{{item}}" bindtap="preview" data-url="{{item}}"></image>
+        </swiper-item>
+    </swiper>
+    <!-- 房主信息 -->
+    <view class="master">
+        <view class="img">
+            <van-image round width="60" height="60" src="{{user.image}}" />
+        </view>
+        <view class="name">
+           {{user.name}}
+        </view>
+        <view class="contact">
+            <view class="phone"> 
+                {{user.phone}}:手机号
+            </view>
+            <view class="wcid">
+               {{user.wxid}} :  微信
+            </view>
+        </view>
+    </view>
+    <!-- 房屋信息 -->
+    <view class="houseT">
+        <view class="tit">{{detail.title}}</view>
+        <view class="mo-ti">
+            <view class="money">{{detail.rent}}元/月</view>
+            <view>{{detail.createtime}}</view>
+        </view>
+    </view>
+    <!-- 房屋详细信息 -->
+    <view class="houseinfo">
+        <view class="head">房屋信息</view>
+        <view class="tinfo">
+            <text class="t1">{{detail.htype}}</text>
+            <text class="t2">{{detail.area}}平</text>
+            <text class="t3">{{detail.floor}}</text>
+        </view>
+        <view class="hdesc">
+            <view class="head">房屋介绍</view>
+            <view class="desc">
+                {{detail.desc}}
+            </view>
+        </view>
+        <view class="address">
+            <text>地址：{{detail.address[2]}}</text>
+            <map 
+                class="map"
+                latitude="{{detail.address[0]}}"
+                longitude="{{detail.address[1]}}"
+                markers="{{markers}}"
+                show-location
+            ></map>
+        </view>
+        <view class="facility">
+            <view class="head">设施设备</view>
+            <view class="facilities">
+                <view class="item" wx:for="{{fac}}" wx:key="index">
+                    <image src="/image/{{item.name}}.png" mode="widthFix"></image>
+                    <view>{{item.Name}}</view>
+                </view>
+            </view>
+        </view>
+    </view>
+    <view class="home"></view>
+    <!-- 底部导航栏 -->
+    <van-goods-action>
+        <van-goods-action-icon icon="like-o" text="关注" wx:if="{{islo==0}}" bind:click="changeImgByL"/>
+        <van-goods-action-icon icon="like" text="关注" wx:else bind:click="changeImgByL"/>
+        <van-goods-action-icon icon="star-o" text="收藏" wx:if="{{iscl==0}}" bind:click="changeimgbyc"/>
+        <van-goods-action-icon icon="star" text="收藏" wx:else bind:click="changeimgbyc" />
+        <van-goods-action-button text="发起签约" bind:click="onClickButton" />
+    </van-goods-action>
+</view>

@@ -1,0 +1,68 @@
+<van-tabs active="{{ active }}" bind:change="onChange">
+  <van-tab title="已签约">
+        <view wx:if="{{sign.length==0}}" class="img">
+            <image src="/image/no-publish.png"></image>
+        </view>
+        <wxs src="./../utils/subStr.wxs" module="tools"></wxs>
+        <view wx:else class="box">
+            <navigator class="item" wx:for="{{sign}}" wx:key="index" url="../detail/detail?id={{item._id}}">
+                <image class="pic" mode="widthFix" src="{{item.image[0]}}"></image>
+                <view class="txt">
+                    <text class="tit">{{tools.sub(item.title)}}</text>
+                    <view class="master">
+                        <text>出租方：{{user.name}}</text>
+                        <text>承租方: {{lesseename[index]}}</text>
+                    </view>
+                    <view class="mo-ti">
+                        <view class="mo">{{item.rent}}元/月</view>
+                        <view class="ti">{{item.createtime}}</view>
+                    </view>
+                </view>
+            </navigator>
+        </view>
+  </van-tab>
+  <van-tab title="待签约">
+    <view wx:if="{{signing.length==0}}" class="img">
+                <image src="/image/no-publish.png"></image>
+        </view>
+        <view wx:else class="box">
+            <navigator class="item" wx:for="{{signing}}" wx:key="index" url="../detail/detail?id={{item._id}}">
+                <image class="pic" mode="widthFix" src="{{item.image[0]}}"></image>
+                <view class="txt">
+                    <text class="tit">{{tools.sub(item.title)}}</text>
+                    <view class="changeinfo">
+                        <text class="notsign">{{lessee[index].name}}发起签约</text>
+                        <view catchtap="checkSign" data-id="{{item._id}}" data-index="{{index}}" data-sid="{{item.signid}}" data-rent="{{item.rent}}" hover-class="hoverc">确定</view>
+                        <view catchtap="refuse"  data-id="{{item._id}}" data-index="{{index}}" hover-class="hoverc">拒绝</view>
+                    </view>
+                    <view class="mo-ti">
+                        <view class="mo">{{item.rent}}元/月</view>
+                        <view class="ti">{{item.createtime}}</view>
+                    </view>
+                </view>
+            </navigator>
+        </view>
+  </van-tab>
+  <van-tab title="未签约">
+        <view wx:if="{{nosign.length==0}}" class="img">
+                <image src="/image/no-publish.png"></image>
+        </view>
+        <view wx:else class="box">
+            <navigator class="item" wx:for="{{nosign}}" wx:key="index" url="../detail/detail?id={{item._id}}">
+                <image class="pic" mode="widthFix" src="{{item.image[0]}}"></image>
+                <view class="txt">
+                    <text class="tit">{{tools.sub(item.title)}}</text>
+                    <view class="changeinfo">
+                        <text class="notsign">未签约</text>
+                        <view catchtap="changeinfo" data-id="{{item._id}}" hover-class="hoverc">编辑</view>
+                        <view catchtap="delete" data-id="{{item._id}}" data-sid="{{item.signid}}" data-index="{{index}}" hover-class="hoverc">删除</view>
+                    </view> 
+                    <view class="mo-ti">
+                        <view class="mo">{{item.rent}}元/月</view>
+                        <view class="ti">{{item.createtime}}</view>
+                    </view>
+                </view> 
+            </navigator>
+        </view>
+  </van-tab>
+</van-tabs>

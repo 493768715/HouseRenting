@@ -1,0 +1,95 @@
+.form{
+    width: 100%;
+    height: 100%;
+}
+.form .item{
+    display: flex;
+    height: 100rpx;
+    align-items: center;
+    border: 1rpx solid #EEEEEE;
+    font-size: 26rpx;
+    position: relative;
+}
+.item .tit{
+    width: 20%;
+    margin: 0 0 0 40rpx;
+    color: #333333;
+}
+.item input{
+    width: 70%;
+}
+.item image{
+    width: 40rpx;
+}
+.Pic{
+    padding-left: 15rpx;
+}
+.item .check{
+    display: flex;
+    position: absolute;
+    right: 30rpx;   
+    top: 35rpx;
+}
+.loc{
+   width: 100%;
+   height: 100%;
+   position: relative;
+}
+.loc input{
+    position: absolute;
+    top: 33rpx;
+    left: 20rpx;
+}
+.loc .lpic{
+    position: absolute;
+    right: 40rpx;
+    top: 33rpx;
+}
+.form .facilities{
+    position: relative;
+    height: 200rpx;
+}
+.item .checkbox{
+    position: absolute;
+    display: flex;
+    left: 190rpx;
+    top: 25rpx;
+    flex-wrap: wrap;
+}
+.checkbox van-checkbox{
+    padding: 0 20rpx 20rpx 0;
+}
+.area{
+    width: 100%;
+    height: 100%;
+    display: flex;
+   justify-content: center;
+    border: 1rpx solid #EEEEEE;
+}
+.area textarea{
+    height: 200rpx ;
+    width: 650rpx;
+    background-color: #F8F8F8;
+    margin:20rpx 0 20rpx ;
+    padding: 20rpx;
+    border-radius: 20rpx;
+}
+
+.upimg{
+    width: 100%;
+    height: 100%;
+    padding: 20rpx 0rpx 20rpx 50rpx;
+    border: 1rpx solid #eee;
+}
+.note{
+    color: #808080;
+    margin: 5rpx 0 0 10rpx;
+}
+.btn{
+    height: 200rpx;
+    display: flex;
+}
+.btn button{
+    margin-top: 60rpx ;
+    height: 80rpx;
+}

@@ -1,0 +1,24 @@
+<view class="box">
+    <view class="tit">
+        <image mode="widthFix" src="/image/focus.png"></image>
+        <text>我的关注</text>
+    </view>
+    <view class="img" wx:if="{{focus.length==0}}">
+        <image mode="widthFix" src="/image/no-house.png"></image>
+    </view>
+    <view wx:else>
+        <navigator class="Item" wx:for="{{focus}}" wx:key="index" url="../detail/detail?id={{item._id}}">
+                <wxs src="./../utils/subStr.wxs" module="tools"></wxs>
+                <image mode="widthFix" class="Pic" src="{{item.image[0]}}"></image>
+                <view class="txt">
+                    <view class="Tit">{{tools.sub(item.title)}}</view>
+                    <view class="Type">{{item.htype}} | {{item.area}} | {{item.floor}} | {{item.rtype}}</view>
+                    <view class="foot">
+                        <view class="Money">{{item.rent}}元/月元/月</view>
+                        <view class="Time">{{item.createtime}}</view>
+                    </view>
+                    <view class="btn" catchtap="deleteFocus" data-id="{{item._id}}">取消关注</view>
+                </view>
+        </navigator>
+    </view>
+</view>

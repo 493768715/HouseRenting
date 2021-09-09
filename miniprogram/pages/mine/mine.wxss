@@ -1,0 +1,70 @@
+.container{
+    height: 1100rpx;
+}
+.head{
+    height: 260rpx;
+    width: 100%;
+     display: flex;
+    background-color: #fff;
+    align-items: center; 
+}
+ .head .hpic{
+    padding:0 50rpx;
+} 
+.head .log{
+    font-size: 35rpx;
+}
+.head .info{
+    height: 100%;
+    width: 100%;
+}
+.head .name{
+    padding: 70rpx 10rpx 10rpx;
+    font-size: 36rpx;
+    font-weight: bold;
+}
+.info .name image{
+    width: 28rpx;
+    padding: 0 10rpx 0 0;
+}
+.info .desc{
+    font-size: 26rpx;
+    color: #B8B8B8;
+    padding-top:  10rpx;
+}
+.head .arrow{
+    width: 81rpx;
+    padding: 0 25rpx 0;
+}
+.item{
+    height: 100rpx;
+    width: 100%;
+    background-color: #fff;
+    font-size: 35rpx;
+    display: flex;
+    align-items: center;
+    position: relative;
+    
+}
+.col{
+    border-bottom: 1rpx dashed #DCDCDC;
+}
+.item .arrow{
+    width: 48rpx;
+    padding: 0 25rpx 0;
+    position: absolute;
+    right: 0rpx;
+}
+.item .Pic{
+    width: 40rpx;
+    padding: 0 10rpx 0 45rpx;
+}
+.item text{
+    padding-left: 20rpx ;
+}
+.house{
+    margin: 30rpx 0;
+}
+.check{
+    margin-top: 30rpx;
+}

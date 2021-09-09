@@ -1,0 +1,78 @@
+<view class="container">
+    <view class="top">
+        <!-- 搜索栏 -->
+        <view class="search">
+            <view class="loc"> 
+                <image mode="widthFix" src="/image/location.png"></image>
+                <text>广东省 广州市</text>
+            </view>
+            <view class="searchInfo">
+                    <input type="text" class="sinfo" placeholder="请输入房屋关键字" bindconfirm="getInfo" confirm-type="done"/>
+                    <view class="spic">
+                        <image mode="widthFix"  src="/image/search.png"></image>
+                    </view>
+            </view> 
+        </view>
+
+        <!-- 房屋类别 -->
+        <view class="Htype">
+            <view class="type">
+                <picker bindchange="bindRegionChange" value="{{Lindex}}" range="{{location}}">
+                    <view class="picker" wx:if="{{Lstatus==0}}">
+                        <text>位置</text>
+                        <image mode="widthFix" src="/image/down.png"></image>
+                    </view>
+                    <view class="picker info" wx:else>
+                        <text>{{location[Lindex]}}</text>
+                    </view>
+                </picker>
+            </view>
+            <view class="type">
+                <picker bindchange="bindRentChange" value="{{Rindex}}" range="{{rentT}}">
+                    <view class="picker" wx:if="{{Rstatus==0}}">
+                        <text>租屋</text>
+                        <image mode="widthFix" src="/image/down.png"></image>
+                    </view>
+                    <view class="picker info" wx:else>
+                        <text>{{rentT[Rindex]}}</text>
+                    </view>
+                </picker>
+            </view>
+            <view class="type">
+                <picker bindchange="bindMoneyChange" value="{{Mindex}}" range="{{money}}">
+                    <view class="picker" wx:if="{{Mstatus==0}}">
+                        <text>价格</text>
+                        <image mode="widthFix" src="/image/down.png"></image>
+                    </view>
+                    <view class="picker info" wx:else>
+                        <text>{{money[Mindex]}}</text>
+                    </view>
+                </picker>
+            </view>
+            <view class="type">
+                <picker bindchange="bindTypeChange" value="{{Tindex}}" range="{{type}}">
+                    <view class="picker" wx:if="{{Tstatus==0}}">
+                        <text>类型</text>
+                        <image mode="widthFix" src="/image/down.png"></image>
+                    </view>
+                    <view class="picker info" wx:else>
+                        <text>{{type[Tindex]}}</text>
+                    </view>
+                </picker>
+            </view>
+        </view>
+    </view>
+    <!-- 搜索结果 -->
+    <view class="result">
+        <wxs src="./../utils/subStr.wxs" module="tools"></wxs>
+        <navigator wx:for="{{house}}"  wx:key="index" url="../detail/detail?id={{item._id}}" >
+            <image mode="widthFix" src="{{item.image[0]}}"></image>
+            <view class="Ritem">
+                <view class="tit">{{tools.sub(item.title)}}</view>
+                <view class="type">{{item.htype}} | {{item.area}} | {{item.floor}} | {{item.rtype}}</view>
+                <view class="money">{{item.rent}}元/月</view>
+                <view class="time">{{item.createtime}}</view>
+            </view>
+        </navigator>
+    </view> 
+</view>

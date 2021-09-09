@@ -1,0 +1,63 @@
+.img{
+    width: 100%;
+    height: 100%;  
+    text-align: center;
+}
+.box{
+    border-top: 1rpx solid #eee;
+    width: 100%;
+    height: 100%;
+}
+.box .item{
+    height: 250rpx;
+    width: 700rpx;
+    display: flex;
+    align-items: center;
+    margin: 20rpx;
+    border: 1rpx solid #eee;
+    box-shadow: 12px 12px 500px #888888;
+}
+.item image{
+    width: 230rpx;
+    padding: 20rpx;
+}
+.txt{
+    width: 55%;
+}
+.txt .tit{
+    font-size: 36rpx;
+}
+.txt .master{
+    font-size: 30rpx;
+    width: 100%;
+    color: 	#696969;
+    display: flex;
+    justify-content: space-between;
+    padding: 15rpx 0 15rpx 0;
+}
+.txt .changeinfo{
+    font-size: 30rpx;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    color: #696969;
+}
+.txt .notsign{
+    color: 	#FF4500;
+}
+.txt .mo-ti{
+    width: 100%;
+    display: flex;
+    font-size: 28rpx;
+    justify-content: space-between;
+}
+.mo-ti .mo{
+    color: #FF6600;
+    font-weight: bold;
+}
+.mo-ti .ti{
+    color: #808080;
+}
+.hoverc{
+    color: 	#A9A9A9;
+}

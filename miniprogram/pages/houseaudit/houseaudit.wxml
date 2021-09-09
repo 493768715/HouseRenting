@@ -1,0 +1,26 @@
+
+<view class="box" >
+    <view class="tit">
+        房源审核
+    </view>
+    <view class="img" wx:if="{{house.length==0}}">
+        <image src="/image/no-house.png"></image>
+    </view>
+    <view class="info" wx:else>
+        <view class="item" wx:for="{{house}}" wx:key="index">
+            <wxs src="./../utils/subStr.wxs" module="tools"></wxs>
+            <image mode="widthFix" class="Pic" src="{{item.image[0]}}"></image>
+            <view class="txt">
+                <view class="Tit">{{tools.sub(item.title)}}</view>
+                <view class="Type">出租者:{{name}}</view>
+                <view class="foot">
+                     <view class="Money">{{item.rent}}元/月</view>
+                     <view class="Time">{{item.createtime}}</view>
+                </view>
+            </view>
+            <view class="audit" wx:if="{{item.isaudit==0}}">审核中</view>
+            <view class="Taudit" wx:elif="{{item.isaudit==1}}">已通过</view>
+            <view class="Faudit" wx:else="{{item.isaudit==2}}">不通过</view>
+        </view>    
+    </view>
+</view>

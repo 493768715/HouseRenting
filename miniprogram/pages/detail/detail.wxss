@@ -1,0 +1,119 @@
+.Box{
+    width: 100%;
+    height: 100%;
+}
+.swiper{
+    height: 400rpx;
+    width: 100%;
+}
+.sitem image{
+    width: 100%;
+}
+.master{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    padding-top: 20rpx;
+    align-items: center;
+    border-bottom: 1rpx solid #eee;
+}
+.master .img{
+    padding: 20rpx 0 10rpx 20rpx;
+}
+.master .name{
+    font-size: 36rpx;
+    color: darkgray;
+    margin-left: 40rpx;
+}
+.master .contact{
+    position: absolute;
+    right: 40rpx;
+    color: darkgray;
+    font-size: 28rpx;
+}
+.contact .phone{
+    padding: 0 0 10rpx 0 ;
+}
+.houseT{
+    margin: 30rpx 20rpx 0 20rpx;
+    padding: 30rpx 20rpx 30rpx 20rpx;
+    box-shadow:#D3D3D3 5rpx 5rpx 20rpx -5rpx;
+    border-radius: 20rpx;
+    color: #696969;
+}
+.houseT .tit{
+    font-size: 36rpx;
+}
+.houseT .mo-ti{
+    display: flex;
+    justify-content: space-between;
+    font-size: 30rpx;
+    margin: 30rpx 0 20rpx 0;
+}
+.mo-ti .money{
+    color: #FF6600;
+}
+.houseinfo{
+    margin: 30rpx 20rpx 30rpx 20rpx  ;
+}
+.head{
+    font-weight: bold;
+    padding: 20rpx 0;
+}
+.tinfo{
+    display: flex;
+}
+.tinfo text{
+    margin: 0 10rpx 0 10rpx;
+    padding: 5rpx;
+    border-radius: 10rpx;
+    color: #fff;
+}
+.t1{
+    background-color: #66CC66;
+}
+.t2{
+    background-color: #99CCFF;
+}
+.t3{
+    background-color: #FF9900;
+}
+.hdesc .desc{
+    color: #696969;
+}
+.address{
+    margin: 20rpx 0 20rpx 0;
+    box-shadow:#D3D3D3 5rpx 5rpx 20rpx -5rpx;
+    padding: 20rpx;
+}
+.address text{
+    color: #696969;
+}
+.map{
+    margin: 20rpx 0 10rpx 0;
+    width: 660rpx;
+    height: 250rpx;
+}
+.facilities{
+    display: flex;
+    flex-wrap: wrap;
+    margin: 20rpx 0 10rpx 0;
+}
+.facilities .item{
+    padding: 0rpx 20rpx 20rpx 20rpx; 
+    text-align: center;
+}
+.facilities image{
+    width: 60rpx;
+}
+
+
+
+
+
+
+
+
+.home{
+    height: 100rpx;
+}

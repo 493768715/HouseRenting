@@ -1,0 +1,32 @@
+<view class="Box">
+    <form bindsubmit="signSub">
+        <view class="master">
+            <view class="Lessor">
+                <text>出租方</text>
+                <input type="text" value="{{user.name}}" disabled/>
+            </view>
+            <view class="Lessee">
+                <text>承租方</text>
+                <input type="text" disabled/>
+            </view>
+        </view>
+        <view class="info">
+            <text decode="{{true}}">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{{desc}}
+            </text>
+            <view class="item">一、房屋地址:<input type="text" name="address" value="{{address}}" disabled/></view>
+            <view class="item">二、租赁期限:<input type="number" name="deadline"  value="{{sign.deadline}}" />月</view>
+            <view class="item">三、租金：<input type="number" name="rent" value="{{rent}}" disabled/>元/月</view>
+            <view class="item">四、押金：<input type="number" name="deposit" value="{{sign.deposit}}"/>元/月</view>
+            <view>五、约定：</view>
+                <textarea value="{{sign.convention}}" class="area1" name="convention" auto-focus="true" ></textarea>
+            <view>六、转租：</view>  
+                <textarea value="{{sign.sublet}}" class="area1" name="sublet" auto-focus="true" ></textarea> 
+            <view>七、违约</view>
+                <textarea value="{{sign.breach}}" class="area1" name="breach" auto-focus="true" maxlength="-1" ></textarea>
+        </view>
+        <view  class="btn">
+            <button type="primary" form-type="submit">保存</button>
+        </view>
+    </form>
+    
+</view>
